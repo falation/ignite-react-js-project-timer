@@ -1,13 +1,16 @@
 import { ThemeProvider } from 'styled-components'
+import { BrowserRouter } from 'react-router-dom'
 
+import { Router } from './Router'
 import { AppTheme } from './styles/global'
 import { theme } from './styles/theme'
 
 export function App() {
   return (
     <ThemeProvider theme={theme}>
-      <span>ignite-react-js-project-timer</span>
-
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
       <AppTheme />
     </ThemeProvider>
   )
